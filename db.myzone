@@ -1,0 +1,20 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	myzone. root.myzone(
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	myzone.
+@	IN	A	10.71.206.82
+
+myservice1	IN	A	192.168.0.111
+myservice2	IN	A	192.168.0.112
+zabbix.myservice2	IN	A	192.168.0.112
+grafana.myservice2   IN      A       192.168.0.112
+
+
